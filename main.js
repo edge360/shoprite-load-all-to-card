@@ -61,6 +61,11 @@ function init() {
   newbutton.addEventListener('click', runSelect);
 
   insertButton(newbutton);
+    // --- AUTO ACTIVATE AFTER 10 SECONDS ---
+  setTimeout(() => {
+    console.log('Auto-clicking Load All To Card button after 10s delay...');
+    newbutton.click();   // fires the same handler as a manual click
+  }, 10000);
 }
 
 init();
